@@ -1,14 +1,11 @@
 import React, {useState} from 'react'
 import api from "../helpers/api";
 
-
-
-
 const Login = (props) => {
     const [error,setError] =  useState();
     const [data, setData]= useState({
-        name: "",
-        email: ""
+        username: "",
+        password: ""
     });
 
     const handleChange = (e) => {
@@ -21,11 +18,11 @@ const Login = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         api()
-        .post("/api/login", data)
-        .then(result => {
-            localStorage.setItem('token', result.data.token)
-            props.history.push('/friends')
-        })
+            .post("/api/login", data)
+            .then(response => {                
+                localStorage.setItem('token', response.data.payload)
+                props.history.push('/friends')
+            })
         .catch(err => {
             setError(err.response.data.message)
         
@@ -35,7 +32,7 @@ const Login = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             {error && <div className="error">{error}</div>}
-            <input type="email" name='email' placeholder="Email" value={data.email} onChange={handleChange}/>
+            <input type="text" name='username' placeholder="User Name" value={data.username} onChange={handleChange}/>
             <input type='password' name='password' placeholder='password' value={data.password} onChange={handleChange}/>
             <button type="submit">Sign In</button>
         </form>
