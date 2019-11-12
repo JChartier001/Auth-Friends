@@ -2,6 +2,7 @@ import React from 'react';
 import Login from "./components/Login"
 import {Link, Route, withRouter} from "react-router-dom";
 import {getToken} from "./helpers/api"
+import Friends from "./components/Friends"
 
 import './App.css';
 
