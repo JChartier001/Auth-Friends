@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
-import axios from 'axios';
+import api from "../helpers/api";
 
 
-const Login = () => {
+
+
+const Login = (props) => {
+    const [error,setError] =  useState();
     const [data, setData]= useState({
         name: "",
         email: ""
@@ -17,10 +20,27 @@ const Login = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-
+        api()
+        .post("/api/login", data)
+        .then(result => {
+            localStorage.setItem('token', result.data.token)
+            props.history.push('/friends')
+        })
+        .catch(err => {
+            setError(err.response.data.message)
+        
+        })
         
     }
     return (
+        <form onSubmit={handleSubmit}>
+            {error && <div className="error">{error}</div>}
+            <input type="email" name='email' placeholder="Email" value={data.email} onChange={handleChange}/>
+            <input type='password' name='password' placeholder='password' value={data.password} onChange={handleChange}/>
+            <button type="submit">Sign In</button>
+        </form>
 
     );
 }
+
+export default Login;
