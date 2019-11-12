@@ -4,6 +4,7 @@ import {Link, Route, withRouter} from "react-router-dom";
 import {getToken} from "./helpers/api";
 import Friends from "./components/Friends";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AddFriend from "./components/AddFriend"
 
 import './App.css';
 
@@ -20,6 +21,7 @@ function App() {
 
       <Route exact path ="/login" component={Login}/>
       <ProtectedRoute exact path="/friends" component={Friends}/>
+      <ProtectedRoute exact path='/addfriend' component={AddFriend} />
 
     </div>
   );
