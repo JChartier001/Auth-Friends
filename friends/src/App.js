@@ -1,8 +1,9 @@
 import React from 'react';
 import Login from "./components/Login"
 import {Link, Route, withRouter} from "react-router-dom";
-import {getToken} from "./helpers/api"
-import Friends from "./components/Friends"
+import {getToken} from "./helpers/api";
+import Friends from "./components/Friends";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
       <h3>Please sign in</h3>
 
       <Route exact path ="/login" component={Login}/>
+      <ProtectedRoute exact path="/friends" component={Friends}/>
 
     </div>
   );
