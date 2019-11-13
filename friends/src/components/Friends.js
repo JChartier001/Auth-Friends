@@ -24,25 +24,29 @@ function Friends(props) {
         })
 }, [])
 return (
-    console.log("TCL: Friends -> friend2", friend),
-    <div>
+    
+    <div className='Top'>    
+        <div className="header">
+        <h1 >My Friends...</h1>
+        </div>
+        <div className="friendList">
     {friend.length && friend!==0 ? friend.map(friend => {
-        return(
-            console.log(friend),
+        return(      
             <div>
             <div className="friendCard">
                 <h2>Name: {friend.name}</h2>
-                <p>Email" {friend.email}</p>
+                <p>Email: {friend.email}</p>
                 <p>Age: {friend.age}</p>
             </div>
             </div>
     )}): null
-    }
-     <button onClick={() => {
-                    props.history.push("/addfriend")
-                }}>Add New Friend
-                     </button>
+    }]</div>
+    <div className="button">
+     <button onClick={() => {props.history.push("/addfriend")}}>Add New Friend</button>
     </div>
+    </div>
+    
+    
 )}
 
 export default Friends;

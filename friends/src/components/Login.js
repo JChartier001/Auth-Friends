@@ -25,16 +25,18 @@ const Login = (props) => {
             })
         .catch(err => {
             setError(err.response.data.message)
-        
         })
         
     }
     return (
         <form onSubmit={handleSubmit}>
+            <div className="login">
+                <h2>Please Login</h2>
             {error && <div className="error">{error}</div>}
             <input type="text" name='username' placeholder="User Name" value={data.username} onChange={handleChange}/>
             <input type='password' name='password' placeholder='password' value={data.password} onChange={handleChange}/>
-            <button type="submit">Sign In</button>
+            <button className="button" type="submit">Sign In</button>
+            </div>
         </form>
 
     );
