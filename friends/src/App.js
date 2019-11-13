@@ -21,7 +21,6 @@ function App() {
       {signedIn && <Link to="/logout">Logout</Link>}
       </nav>
       
-
       <Route exact path ="/login" component={Login}/>
       <ProtectedRoute exact path="/friends" component={Friends}/>
       <ProtectedRoute exact path='/addfriend' component={AddFriend} />
