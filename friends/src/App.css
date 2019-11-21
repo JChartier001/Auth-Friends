@@ -1,0 +1,84 @@
+nav{
+  margin: 0 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;  
+}
+
+h1{
+  text-align:center;
+}
+
+.friendList{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.friendCard{
+  border: 3px solid rgb(149, 44, 235);  
+  padding: 0 5%;
+  color: rgb(138, 236, 199);
+  width: fit-content;
+  background:  rgb(149, 44, 235);
+  border-radius: 30px;
+  margin: 2% 5%;
+}
+
+.Top{
+  margin: 0 4%;
+}
+
+.header{
+  text-align: center;
+}
+
+p{
+  font-size: 1.2rem;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+}
+
+.addFriendCard{
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
+  margin-top: 4%;
+  border: 3px solid rgb(149, 44, 235);
+  padding:2% 5% 5% 5%;
+  background:  rgb(149, 44, 235);
+  border-radius: 30px;
+}
+
+input{
+  margin: 1% 0;
+  padding: 1% 5%;
+  font-size: 1.0rem;  
+  border-radius: 5px;
+  width: 90%
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  margin: 7%;
+  font-size: 1rem;  
+}
+
+.login{
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
+  margin-top: 4%;
+  border: 3px solid rgb(149, 44, 235);
+  padding:2% 5% 5% 5%;
+  background:  rgb(149, 44, 235);
+  border-radius: 30px;
+}
