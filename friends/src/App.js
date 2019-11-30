@@ -4,9 +4,9 @@ import {Link, Route, withRouter} from "react-router-dom";
 import {getToken} from "./helpers/api";
 import Friends from "./components/Friends";
 import ProtectedRoute from "./components/ProtectedRoute";
-import AddFriend from "./components/AddFriend";
-import EditFriend from "./components/EditFriend";
+import AddFriend from "./components/AddFriend"
 import Logout from "./components/Logout"
+import EditFriend from "./components/EditFriends"
 
 import './App.css';
 
@@ -24,9 +24,9 @@ function App() {
       
       <Route exact path ="/login" component={Login}/>
       <ProtectedRoute exact path="/friends" component={Friends}/>
-      <ProtectedRoute exact path="/editfriend/:id" component={EditFriend}/>
       <ProtectedRoute exact path='/addfriend' component={AddFriend} />
       <ProtectedRoute exact path='/logout' component={Logout} />
+      <ProtectedRoute exact path="/editfriend/:id" component={EditFriend}/>
 
     </div>
   );

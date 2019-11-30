@@ -25,7 +25,7 @@ const AddFriend = (props) =>{
             email: newFriend.email,
             age: newFriend.age
         })
-        .then(response => {
+        .then(() => {
             props.history.push('/friends')
         })
         .catch(error => {
@@ -35,13 +35,11 @@ const AddFriend = (props) =>{
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="addFriendCard">
-            <h2>Enter Friends Information</h2>
+            <h3>Enter Friends Information</h3>
             <input type="text" name="name" placeholder="Name" onChange={handleInput}/>
             <input type="email" name="email" placeholder="Email" onChange={handleInput}/>
             <input type="text" name="age" placeholder="Age" onChange={handleInput}/>
             <button className="button" type="submit">Add New Friend</button>
-            </div>
         </form>
     )
 }
