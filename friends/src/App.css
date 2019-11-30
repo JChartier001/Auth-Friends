@@ -1,7 +1,16 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
 nav{
-  margin: 0 20%;
+  /* margin: 0 20%; */
   display: flex;
   justify-content: space-around;
+  width: 80%;
+  margin-bottom: 5%;
 }
 
 nav a {
@@ -43,33 +52,52 @@ p{
 
 form{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  padding: 2%;
+  border: 1px solid black;
+  box-shadow: rgb(44, 95, 95) 5px 5px 5px 5px;
+  border-radius: 10px;
+  background:  rgb(149, 44, 235);
+  color: rgb(186, 224, 250)
 }
 
-.addFriendCard{
+/* .addFriendCard{
   display: flex;
   flex-direction: column;    
   align-items: center;
-  margin-top: 4%;
   border: 3px solid rgb(149, 44, 235);
-  padding:2% 5% 5% 5%;
   background:  rgb(149, 44, 235);
-  border-radius: 30px;
-}
+ 
+} */
 
 input{
-  margin: 1% 0;
+  margin: 2% 0;
   padding: 1% 5%;
   font-size: 1.0rem;  
   border-radius: 5px;
-  width: 90%
+  width: 80%
 }
 
-.button{
+button{
+  display: flex;
+  align-items: center;  
+  margin: 4%;
+  
+  font-size: 1rem;  
+  border: 1px solid black;
+  background: linear-gradient(45deg, rgb(5, 235, 235), rgb(9, 6, 241));
+}
+.save{
+  margin-bottom: 0%;
+  background :linear-gradient(45deg, rgb(5, 235, 235), rgb(9, 6, 241));
+}
+.editDelete{
   display: flex;
   justify-content: center;
-  margin: 7%;
-  font-size: 1rem;  
+  margin-bottom: 5%;
+
 }
 
 .login{

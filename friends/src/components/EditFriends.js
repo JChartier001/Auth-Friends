@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import api from "../helpers/api";
-import Friends from "./Friends"
-import axios from 'axios';
+
 
 const EditFriends = (props) => {
     console.log(props);
@@ -46,7 +45,7 @@ const EditFriends = (props) => {
             <input type="text" name="name" placeholder="Name" value={editFriend.name} onChange={handleInput}/>
             <input type="email" name="email" placeholder="Email"value={editFriend.email} onChange={handleInput}/>
             <input type="text" name="age" placeholder="Age" value={editFriend.age} onChange={handleInput}/>
-            <button className="button" type="submit">Save</button>
+            <button className="save" type="submit">Save</button>
         </form>
     )
 }
